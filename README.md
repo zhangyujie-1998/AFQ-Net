@@ -59,8 +59,9 @@ If you find this work is helpful, please consider citing:
 @article{zhang2024asynchronous,
   title={Asynchronous Feedback Network for Perceptual Point Cloud Quality Assessment},
   author={Zhang, Yujie and Yang, Qi and Shan, Ziyu and Xu, Yiling},
-  journal={arXiv preprint arXiv:2407.09806},
-  year={2024}
+  journal={IEEE Transactions on Circuits and Systems for Video Technology},
+  year={2024},
+  publisher={IEEE}
 }
 ```
 
