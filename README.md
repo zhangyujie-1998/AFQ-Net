@@ -35,51 +35,21 @@ We use 2D projections of point clouds as the network input, including texture, d
 
 If you want to create projections for new databases, you need to replace the path of  'data_dir' in the MyProjection.py with the path of data on your computer. The file structure of used data should be like:
 
-`\````
+```
 
-`├── SJTU-PCQA`
+├── SJTU-PCQA
 
-`│  ├── hhi_0.ply`
+│  ├── hhi_0.ply
 
-`│  ├── hhi_1.ply`
+│  ├── hhi_1.ply
 
-`...`
+...
 
-`\````
+```
 
 ## 🚆 Training
 
-AFQ-Net uses pre-trained vision transformer (ViT) as the backbone and we provide the pre-trained weight of ViT in  [Onedrive](https://1drv.ms/f/c/669676c02328fc1b/Eonj9bAnDT5NrXkHMzTKuDABIAz6VdX-dHi8JvfTMi_Tiw?e=mHKXZV).  You need to put the pre-trained weights in the ```checkpoint``` folder. Then, you can simply train the AFQ-Net by referring to train.sh. For example, you can train AFQ-Net on the WPC database with the following command:
-
-`CUDA_VISIBLE_DEVICES=0 nohup python -u train.py \`
-
-`--save_flag True \`
-
-`--num_epochs 50 \`
-
-`--batch_size 8 \`
-
-`--test_patch_num 10 \`
-
-`--learning_rate 0.00002 \`
-
-`--decay_rate 5e-4 \`
-
-`--database WPC \`
-
-`--data_dir_texture ./database/WPC/proj_6view_512_texture \`
-
-`--data_dir_depth ./database/WPC/proj_6view_512_depth \`
-
-`--data_dir_mask ./database/WPC/proj_6view_512_mask \`
-
-`--output_dir ./results/WPC/ \`
-
-`--k_fold_num 5 \`
-
-`> logs/log_WPC.txt 2>&1 &`
-
-You only need to replace the path of 'data_dir_texture', 'data_dir_depth' and 'data_dir_mask' with the path of projections on your computer. If you want to use the databases adopted in the paper, you can unzip the provided .zip file in the  ```database``` folder.
+AFQ-Net uses pre-trained vision transformer (ViT) as the backbone and we provide the pre-trained weight of ViT in  [Onedrive](https://1drv.ms/f/c/669676c02328fc1b/Eonj9bAnDT5NrXkHMzTKuDABIAz6VdX-dHi8JvfTMi_Tiw?e=mHKXZV).  You need to put the pre-trained weights in the ```checkpoint``` folder. Then, you can simply train the AFQ-Net by referring to train.sh.  You only need to replace the path of 'data_dir_texture', 'data_dir_depth' and 'data_dir_mask' with the path of projections on your computer. If you want to use the databases adopted in the paper, you can unzip the provided .zip file in the  ```database``` folder.
 
 
 ## 📖 Citation
